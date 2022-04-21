@@ -1,0 +1,9 @@
+<mvc:View controllerName="logaligroup.sapui5.controller.HelloPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd"></Button>
+    <Input value="{/recipient/name}" valueLiveUpdate="true" width="60%"></Input>
+    <Text text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements sapthemeHighlight-asColor">
+
+    </Text>
+</mvc:View>
