@@ -7,9 +7,9 @@
                 <Label text="{i18n>labelPerson}" labelFor="persName"/>
 
                 <Input id="persName" width="40%"/>
-                <Text text="{i18n>largo}">
+                <!-- <Text text="{i18n>largo}">
 
-                </Text>
+                </Text> -->
 
 
             </f:content>
