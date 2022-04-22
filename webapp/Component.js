@@ -2,12 +2,13 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "logaligroup/sapui5/model/Models",
-    "sap/ui/model/resource/ResourceModel"
+    "sap/ui/model/resource/ResourceModel", 
+    "./controller/HelloDialog"
 ],
     /**
     * @param {typeof sap.ui.core.UIComponent} UIComponent
     */
-    function (UIComponent, Models, ResourceModel) {
+    function (UIComponent, Models, ResourceModel, HelloDialog) {
         return UIComponent.extend("logaligroup.sapui5.Component", {
             // metadata: {
             //     "rootView": {
@@ -32,6 +33,18 @@ sap.ui.define([
                     bundleName: "logaligroup.sapui5.i18n.i18n"
                 });
                 this.setModel(i18nModel, "i18n");
+
+                this._helloDialog = new HelloDialog(this.getRootControl());
+            }, 
+
+            exit: function(){
+                this._helloDialog.destroy();
+                delete this._helloDialog;
+            },
+
+            openHelloDialgo: function(){
+                this._helloDialog.open();
+
             }
         });
     });
