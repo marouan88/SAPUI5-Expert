@@ -1,6 +1,7 @@
 <c:FragmentDefinition xmlns="sap.m"
     xmlns:c="sap.ui.core">
     <Dialog id="helloDialog" title="Hello {/recipient/name}">
+        <c:Icon src="sap-icon://excel-attachment" size="8rem" />
         <beginButton>
             <Button text="{i18n>closeDialogBtn}" press=".onCloseDialog">
 
